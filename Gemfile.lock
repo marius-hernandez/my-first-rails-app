@@ -121,6 +121,7 @@ GEM
     loofah (2.23.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
+    lru_redux (1.1.0)
     mail (2.8.1)
       mini_mime (>= 0.1.1)
       net-imap
@@ -147,6 +148,7 @@ GEM
     parser (3.3.5.0)
       ast (~> 2.4.1)
       racc
+    pg (1.5.9-x64-mingw-ucrt)
     psych (5.1.2)
       stringio
     public_suffix (6.0.1)
@@ -235,6 +237,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    shadcn-ui (0.0.15)
+      tailwind_merge (~> 0.12)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -246,6 +250,12 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.1)
+    tailwind_merge (0.13.2)
+      lru_redux (~> 1.1)
+    tailwindcss-rails (3.0.0)
+      railties (>= 7.0.0)
+      tailwindcss-ruby
+    tailwindcss-ruby (3.4.14-x64-mingw-ucrt)
     thor (1.3.2)
     timeout (0.4.1)
     turbo-rails (2.0.11)
@@ -281,13 +291,16 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  pg
   puma (>= 5.0)
   rails (~> 7.2.1, >= 7.2.1.2)
   rubocop-rails-omakase
   selenium-webdriver
+  shadcn-ui
   sprockets-rails
   sqlite3 (>= 1.4)
   stimulus-rails
+  tailwindcss-rails
   turbo-rails
   tzinfo-data
   web-console
