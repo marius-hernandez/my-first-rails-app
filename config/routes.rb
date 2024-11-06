@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   
   # resources
   resources :posts
-  
+  resources :home
 end

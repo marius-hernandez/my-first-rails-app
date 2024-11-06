@@ -53,3 +53,7 @@ end
 # ui
 gem "shadcn-ui"
 gem "tailwindcss-rails"
+
+gem "devise", "~> 4.9"
+
+gem "hotwire-rails", "~> 0.1.3"
