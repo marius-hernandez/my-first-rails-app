@@ -1,8 +1,11 @@
 class HomeController < ApplicationController
   include Postable
+  
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_user_status
+  
   def index
+    @user_status = ""
     @post = Post.new
   end
 
@@ -53,5 +56,9 @@ class HomeController < ApplicationController
   # Only allow a trusted parameter "white list" through.
   def post_params
     params.require(:post).permit(:username, :content)
+  end
+
+  def set_user_status
+    @user_status = "maryus"
   end
 end
