@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
   include Postable
-  
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+
+  before_action :set_post, only: [ :show, :edit, :update, :destroy ]
   before_action :set_user_status
-  
+
   def index
     @user_status = ""
     @post = Post.new
@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to root_path, notice: 'Post was successfully created.'
+      redirect_to root_path, notice: "Post was successfully created."
     else
       render :index
     end
@@ -23,7 +23,7 @@ class HomeController < ApplicationController
   def update
     if @post.update(post_params)
       # redirect_to @post, notice: 'Post was successfully updated.'
-      redirect_to root_path, notice: 'Post was successfully updated.'
+      redirect_to root_path, notice: "Post was successfully updated."
     else
       render :edit
     end
@@ -38,12 +38,12 @@ class HomeController < ApplicationController
   def edit
   end
 
-  
+
 
   # DELETE /posts/:id
   def destroy
     @post.destroy
-    redirect_to root_path, notice: 'Post was successfully destroyed.'
+    redirect_to root_path, notice: "Post was successfully destroyed."
   end
 
   private

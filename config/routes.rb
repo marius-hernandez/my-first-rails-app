@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  # if Rails.env.development?
+  #   mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
+  # end
+  # post "/graphql", to: "graphql#execute"
   root "home#index"
 
   # pages
+  get "profile", to: "profile#index"
   get "about", to: "home#about"
   get "posts", to: "posts#index"
   get "signup", to: "signup#index"
@@ -15,7 +20,10 @@ Rails.application.routes.draw do
   # resources
   resources :posts
   resources :home
-
+  resources :login
+  resources :signup
+  resources :users
+  resources :profile
 
   namespace :api do
     namespace :v1 do

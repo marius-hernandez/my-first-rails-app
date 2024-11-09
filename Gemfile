@@ -61,3 +61,5 @@ gem "hotwire-rails", "~> 0.1.3"
 
 gem "rails_logger"
 gem "foreman"
+gem "graphql"
+gem "graphiql-rails", group: :development
